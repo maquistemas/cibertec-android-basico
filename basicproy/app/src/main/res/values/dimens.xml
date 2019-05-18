@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="logo_principal_layout_padding_left">10dp</dimen>
+    <dimen name="logo_txt_margin_top">15dp</dimen>
+    <dimen name="logo_txt_margin_left">15dp</dimen>
+    <dimen name="logo_txt_margin_right">15dp</dimen>
+    <dimen name="login_btn_margin_right">15dp</dimen>
+    <dimen name="login_btn_margin_top">15dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondoLogin"
+    android:orientation="vertical"
+    >
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logomaq01"/>
+    <EditText
+        android:id="@+id/txt_user"
+        android:layout_below="@id/iv_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/logo_txt_margin_left"
+        android:layout_marginRight="@dimen/logo_txt_margin_right"
+        android:hint="@string/txt_user"/>
+    <EditText
+        android:id="@+id/txt_password"
+        android:layout_below="@id/txt_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/logo_txt_margin_left"
+        android:layout_marginRight="@dimen/logo_txt_margin_right"
+        android:layout_marginTop="@dimen/logo_txt_margin_top"
+        android:hint="@string/txt_password"/>
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_below="@+id/txt_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/fondoBtnLogin"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="@dimen/login_btn_margin_right"
+        android:layout_marginTop="@dimen/login_btn_margin_top"
+        android:hint="@string/btn_login"/>
+
+
+
+</RelativeLayout>
