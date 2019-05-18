@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -29,8 +30,10 @@ public class MenuActivity extends AppCompatActivity {
     private void login(String usuario, String password) {
 
         if(usuario.equalsIgnoreCase("JOHN") && password.equalsIgnoreCase("123")){
+            Toast.makeText(MenuActivity.this, "Bienvenido: "+usuario,Toast.LENGTH_LONG).show();
             ((TextView)findViewById(R.id.tv_mensaje_bienvenida)).setText("Bienvenido: "+usuario);
         }else {
+            Toast.makeText(MenuActivity.this, "Usuario no identificado", Toast.LENGTH_LONG).show();
             ((TextView)findViewById(R.id.tv_mensaje_bienvenida)).setText("Usuario no identificado: "+ usuario + " "+password);
         }
 
