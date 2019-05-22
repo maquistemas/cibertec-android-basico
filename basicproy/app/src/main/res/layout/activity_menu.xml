@@ -11,6 +11,13 @@
     android:textColor="@color/tvMensajeBienvenida"
 
     />
+    <Button
+        android:id="@+id/btPlatosCriollos"
+        android:layout_below="@+id/tv_mensaje_bienvenida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/platos_criollos"
+        android:background="@color/colorAccent"/>
 
 
 

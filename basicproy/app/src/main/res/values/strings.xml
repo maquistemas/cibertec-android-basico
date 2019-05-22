@@ -5,5 +5,15 @@
     <string name="btn_login">Login</string>
     <string name="title_activity_menu">MenuActivity</string>
 
+    <string name="platos_criollos">Platos Criollos</string>
+
+    <string name="action_ordenar_por_cliente">Ordenar por Cliente</string>
+    <string name="action_ordenar_por_direccion">Ordenar por Direccion</string>
+    <string name="action_ordenar_por_turno_ini">Ordenar por Turno de Inicio</string>
+    <string name="action_ordenar_por_turno_fin">Ordenar por Turno de Final</string>
+    <string name="action_ordenar_por_prioridad">Ordenar por Prioridad</string>
+    <string name="action_lista_entrega_buscar">Buscar</string>
+    <string name="action_lista_entrega_escanear">Escanear</string>
+
 
 </resources>

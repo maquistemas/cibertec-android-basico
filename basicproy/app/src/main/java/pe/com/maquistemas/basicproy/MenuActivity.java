@@ -1,23 +1,28 @@
 package pe.com.maquistemas.basicproy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MenuActivity extends AppCompatActivity {
+public class MenuActivity extends AppCompatActivity implements  View.OnClickListener{
 
     String usuario ="";
     String password ="";
+    Button btPlatosCriollos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        inicializarObjetos();
 
          this.usuario = getIntent().getStringExtra("key_usuario");
          this.password = getIntent().getStringExtra("key_password");
@@ -25,6 +30,11 @@ public class MenuActivity extends AppCompatActivity {
         login(this.usuario, this.password);
 
 
+    }
+
+    private void inicializarObjetos() {
+        this.btPlatosCriollos = findViewById(R.id.btPlatosCriollos);
+        this.btPlatosCriollos.setOnClickListener(this);
     }
 
     private void login(String usuario, String password) {
@@ -42,4 +52,17 @@ public class MenuActivity extends AppCompatActivity {
     }
 
 
+
+
+    @Override
+    public void onClick(View v) {
+
+        switch (v.getId()){
+            case R.id.btPlatosCriollos:
+                Intent intent = new Intent(MenuActivity.this, ToolbarPersonalizadoActivity.class);
+                startActivity(intent);
+                break;
+        }
+
+    }
 }
