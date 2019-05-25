@@ -15,5 +15,8 @@
     <string name="action_lista_entrega_buscar">Buscar</string>
     <string name="action_lista_entrega_escanear">Escanear</string>
 
+    <string name="criollo_arrozpollo">Arroz con Pollo</string>
+    <string name="criollo_ceviche">Ceviche</string>
+
 
 </resources>
