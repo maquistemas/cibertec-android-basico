@@ -1,5 +1,9 @@
 package pe.com.maquistemas.basicproy;
 
+import android.content.ClipData;
+import android.icu.text.SimpleDateFormat;
+import android.support.annotation.DrawableRes;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -8,10 +12,20 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.Date;
+import java.util.Locale;
 
 public class ToolbarPersonalizadoActivity extends AppCompatActivity {
-
+    public final static String KEY_TOOLBAR = "key_toolbar";
     LinearLayout layoutFactura,layoutBusqueda;
+    MenuItem item_action_buscar;
+    TextView txtFecha;
+    boolean flag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +40,8 @@ public class ToolbarPersonalizadoActivity extends AppCompatActivity {
 
         layoutFactura=findViewById(R.id.layoutFactura);
         layoutBusqueda=findViewById(R.id.layoutBusqueda);
+        item_action_buscar = findViewById(R.id.action_buscar);
+        txtFecha = findViewById(R.id.txtFecha);
     }
 
     private void setToolbar() {
@@ -48,10 +64,24 @@ public class ToolbarPersonalizadoActivity extends AppCompatActivity {
 
 
             case R.id.action_buscar:
+                if(!this.flag){
+                    layoutFactura.setVisibility(View.GONE);
+                    layoutBusqueda.setVisibility(View.VISIBLE);
 
-                layoutFactura.setVisibility(View.GONE);
-                layoutBusqueda.setVisibility(View.VISIBLE);
-                return true;
+
+                    txtFecha.setText(Fecha.getFecha());
+                    //this.item_action_buscar.setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.grabar_32x32, null));
+                    //this.item_action_buscar.setIcon();
+                    this.flag = !this.flag;
+                    return true;
+                }else {
+                    layoutFactura.setVisibility(View.VISIBLE);
+                    layoutBusqueda.setVisibility(View.GONE);
+                    txtFecha.setText(Fecha.getFecha());
+                    this.flag = !this.flag;
+                    return true;
+                }
+
 
             default:
                 return super.onOptionsItemSelected(item);

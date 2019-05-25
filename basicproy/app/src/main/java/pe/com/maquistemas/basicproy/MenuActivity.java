@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static pe.com.maquistemas.basicproy.ToolbarPersonalizadoActivity.KEY_TOOLBAR;
+
 public class MenuActivity extends AppCompatActivity implements  View.OnClickListener{
 
     String usuario ="";
@@ -39,12 +41,15 @@ public class MenuActivity extends AppCompatActivity implements  View.OnClickList
 
     private void login(String usuario, String password) {
 
-        if(usuario.equalsIgnoreCase("JOHN") && password.equalsIgnoreCase("123")){
-            Toast.makeText(MenuActivity.this, "Bienvenido: "+usuario,Toast.LENGTH_LONG).show();
-            ((TextView)findViewById(R.id.tv_mensaje_bienvenida)).setText("Bienvenido: "+usuario);
-        }else {
-            Toast.makeText(MenuActivity.this, "Usuario no identificado", Toast.LENGTH_LONG).show();
-            ((TextView)findViewById(R.id.tv_mensaje_bienvenida)).setText("Usuario no identificado: "+ usuario + " "+password);
+        if(usuario != null && password != null){
+            if(usuario.equalsIgnoreCase("JOHN") && password.equalsIgnoreCase("123")){
+                Toast.makeText(MenuActivity.this, "Bienvenido: "+usuario,Toast.LENGTH_LONG).show();
+                ((TextView)findViewById(R.id.tv_mensaje_bienvenida)).setText("Bienvenido: "+usuario);
+            }else {
+                Toast.makeText(MenuActivity.this, "Usuario no identificado", Toast.LENGTH_LONG).show();
+                ((TextView)findViewById(R.id.tv_mensaje_bienvenida)).setText("Usuario no identificado: "+ usuario + " "+password);
+            }
+
         }
 
 
@@ -60,6 +65,7 @@ public class MenuActivity extends AppCompatActivity implements  View.OnClickList
         switch (v.getId()){
             case R.id.btPlatosCriollos:
                 Intent intent = new Intent(MenuActivity.this, ToolbarPersonalizadoActivity.class);
+                intent.putExtra(KEY_TOOLBAR,"clave");
                 startActivity(intent);
                 break;
         }

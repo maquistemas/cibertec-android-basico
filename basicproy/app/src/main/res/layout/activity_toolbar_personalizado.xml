@@ -24,14 +24,14 @@
                 android:id="@+id/txtFactura"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="FACTURA : 001-1548487"
+                android:text="Menú del día"
                 android:textColor="@color/colorWhite"/>
             <TextView
                 android:id="@+id/txtFecha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:text="Fecha : 01/06/2019"
+                android:text="Fecha : 25/05/2019"
                 android:textColor="@color/colorWhite"/>
         </LinearLayout>
 
@@ -48,6 +48,7 @@
                 android:layout_height="match_parent"
                 android:background="@color/colorWhite"
                 android:hint="Texto a buscar"/>
+
         </LinearLayout>
 
     </android.support.v7.widget.Toolbar>
