@@ -6,6 +6,8 @@ import android.support.annotation.DrawableRes;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -17,6 +19,7 @@ import android.widget.TextView;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
@@ -27,6 +30,8 @@ public class ToolbarPersonalizadoActivity extends AppCompatActivity {
     TextView txtFecha;
     boolean flag = false;
     Menu menu;
+    ArrayList<Plato> platos;
+    RecyclerView recyclerMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +39,21 @@ public class ToolbarPersonalizadoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_toolbar_personalizado);
         setToolbar();
         inicializarObjetos();
+        setRecyclerPlatos();
+
+    }
+
+    private void setRecyclerPlatos() {
+        platos = new ArrayList<>();
+        recyclerMenu = (RecyclerView)findViewById(R.id.recyclerMenu);
+        recyclerMenu.setLayoutManager(new GridLayoutManager(this, 1));
+
+        for(int i=0; i < 2; i++){
+
+        }
+
+        MenuAdapter menuAdapter = new MenuAdapter(platos);
+        recyclerMenu.setAdapter(menuAdapter);
 
     }
 
