@@ -26,6 +26,7 @@ public class ToolbarPersonalizadoActivity extends AppCompatActivity {
     MenuItem item_action_buscar;
     TextView txtFecha;
     boolean flag = false;
+    Menu menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +56,7 @@ public class ToolbarPersonalizadoActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_toolbar_personalizado, menu);
+        this.menu = menu;
         return super.onCreateOptionsMenu(menu);
     }
     @Override
@@ -67,17 +69,15 @@ public class ToolbarPersonalizadoActivity extends AppCompatActivity {
                 if(!this.flag){
                     layoutFactura.setVisibility(View.GONE);
                     layoutBusqueda.setVisibility(View.VISIBLE);
-
-
                     txtFecha.setText(Fecha.getFecha());
-                    //this.item_action_buscar.setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.grabar_32x32, null));
-                    //this.item_action_buscar.setIcon();
+                    menu.getItem(5).setIcon(R.drawable.close18);
                     this.flag = !this.flag;
                     return true;
                 }else {
                     layoutFactura.setVisibility(View.VISIBLE);
                     layoutBusqueda.setVisibility(View.GONE);
                     txtFecha.setText(Fecha.getFecha());
+                    menu.getItem(5).setIcon(R.drawable.buscar_white);
                     this.flag = !this.flag;
                     return true;
                 }
