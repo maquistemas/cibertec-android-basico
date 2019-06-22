@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (v.getId()){
             case R.id.btn_login:
-                Intent intent = new Intent(MainActivity.this, MenuActivity.class);
+                Intent intent = new Intent(MainActivity.this, MenuLateralActivity.class);
                 intent.putExtra("key_usuario", this.txt_user.getText().toString());
                 intent.putExtra("key_password", this.txt_password.getText().toString());
                 //startActivityForResult(intent, REQUEST_CODE_VALIDAR );

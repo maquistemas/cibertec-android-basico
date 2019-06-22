@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">basicproy</string>
+    <string name="app_name">Restaurante Criollo</string>
     <string name="txt_user">Usuario</string>
     <string name="txt_password">Password</string>
     <string name="btn_login">Login</string>
@@ -17,6 +17,22 @@
 
     <string name="criollo_arrozpollo">Arroz con Pollo</string>
     <string name="criollo_ceviche">Ceviche</string>
+
+
+    <!--menu_nav-->
+    <string name="user_name">restaurant@maquistemas.com</string>
+    <string name="nav_inbox">Mesagez</string>
+    <string name="nav_drafts">Draftz</string>
+    <string name="nav_sent">Sent mesagez</string>
+    <string name="nav_trash">In da trash</string>
+    <string name="nav_support">Support</string>
+    <string name="nav_help">Halp</string>
+    <string name="nav_feedback">Giv us feedback</string>
+    <string name="nav_open_drawer">Open navigation drawer</string>
+    <string name="nav_close_drawer">Close navigation drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>
