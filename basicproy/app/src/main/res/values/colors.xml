@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">#05004e</color>
+    <color name="colorPrimaryDark">#ffa323</color>
     <color name="colorAccent">#D81B60</color>
     <color name="fondoLogin">#ffa323</color>
     <color name="fondoBtnLogin">#107595</color>
@@ -24,6 +24,10 @@
     <color name="colorAmarillo">#ffd400</color>
 
     <color name="control_background">#cc4285f4</color>
+
+
+    <color name="drwerFont">#f3ff93</color>
+    <color name="drwerBg">#05004e</color>
 
 
 </resources>
