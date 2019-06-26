@@ -21,13 +21,13 @@
 
     <!--menu_nav-->
     <string name="user_name">restaurant@maquistemas.com</string>
-    <string name="nav_inbox">Mesagez</string>
-    <string name="nav_drafts">Draftz</string>
-    <string name="nav_sent">Sent mesagez</string>
-    <string name="nav_trash">In da trash</string>
-    <string name="nav_support">Support</string>
-    <string name="nav_help">Halp</string>
-    <string name="nav_feedback">Giv us feedback</string>
+    <string name="nav_nosotros">Nosotros</string>
+    <string name="nav_criollos">Platos criollos</string>
+    <string name="nav_sucursal">Sucursales</string>
+    <string name="nav_reserva">Reservaciones</string>
+    <string name="nav_soporte">Soporte</string>
+    <string name="nav_ayuda">Ayuda</string>
+    <string name="nav_admin">Administracion</string>
     <string name="nav_open_drawer">Open navigation drawer</string>
     <string name="nav_close_drawer">Close navigation drawer</string>
 
