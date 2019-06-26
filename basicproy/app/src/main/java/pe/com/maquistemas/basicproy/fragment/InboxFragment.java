@@ -1,4 +1,4 @@
-package pe.com.maquistemas.basicproy;
+package pe.com.maquistemas.basicproy.fragment;
 
 
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import pe.com.maquistemas.basicproy.R;
 
 
 public class InboxFragment extends Fragment {

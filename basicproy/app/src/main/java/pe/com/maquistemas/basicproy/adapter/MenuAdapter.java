@@ -1,4 +1,4 @@
-package pe.com.maquistemas.basicproy;
+package pe.com.maquistemas.basicproy.adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -9,7 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
+
+import pe.com.maquistemas.basicproy.R;
+import pe.com.maquistemas.basicproy.model.Plato;
 
 public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
 

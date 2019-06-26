@@ -1,4 +1,4 @@
-package pe.com.maquistemas.basicproy;
+package pe.com.maquistemas.basicproy.model;
 
 public class Plato {
 

@@ -1,9 +1,5 @@
-package pe.com.maquistemas.basicproy;
+package pe.com.maquistemas.basicproy.activity;
 
-import android.content.ClipData;
-import android.icu.text.SimpleDateFormat;
-import android.support.annotation.DrawableRes;
-import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -16,12 +12,12 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Locale;
+
+import pe.com.maquistemas.basicproy.R;
+import pe.com.maquistemas.basicproy.adapter.MenuAdapter;
+import pe.com.maquistemas.basicproy.model.Plato;
+import pe.com.maquistemas.basicproy.utilitario.Fecha;
 
 public class ToolbarPersonalizadoActivity extends AppCompatActivity {
     public final static String KEY_TOOLBAR = "key_toolbar";

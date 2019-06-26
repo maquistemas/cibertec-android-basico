@@ -1,4 +1,4 @@
-package pe.com.maquistemas.basicproy;
+package pe.com.maquistemas.basicproy.utilitario;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

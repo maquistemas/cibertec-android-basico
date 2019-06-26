@@ -1,17 +1,16 @@
-package pe.com.maquistemas.basicproy;
+package pe.com.maquistemas.basicproy.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static pe.com.maquistemas.basicproy.ToolbarPersonalizadoActivity.KEY_TOOLBAR;
+import pe.com.maquistemas.basicproy.R;
+
+import static pe.com.maquistemas.basicproy.activity.ToolbarPersonalizadoActivity.KEY_TOOLBAR;
 
 public class MenuActivity extends AppCompatActivity implements  View.OnClickListener{
 
