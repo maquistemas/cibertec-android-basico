@@ -10,17 +10,17 @@
             android:checked="true"
             />
         <item
-            android:id="@+id/nav_drafts"
+            android:id="@+id/nav_criollos"
             android:icon="@android:drawable/ic_menu_edit"
             android:title="@string/nav_criollos"
             />
         <item
-            android:id="@+id/nav_sent"
+            android:id="@+id/nav_sucursales"
             android:icon="@android:drawable/ic_menu_send"
             android:title="@string/nav_sucursal"
             />
         <item
-            android:id="@+id/nav_trash"
+            android:id="@+id/nav_reservaciones"
             android:icon="@android:drawable/ic_menu_send"
             android:title="@string/nav_reserva"
             />
@@ -31,12 +31,12 @@
         >
         <menu>
             <item
-                android:id="@+id/nav_help"
+                android:id="@+id/nav_ayuda"
                 android:icon="@android:drawable/ic_menu_help"
                 android:title="@string/nav_ayuda"
                 />
             <item
-                android:id="@+id/nav_feedback"
+                android:id="@+id/nav_administracion"
                 android:icon="@android:drawable/ic_lock_idle_lock"
                 android:title="@string/nav_admin"
                 />
