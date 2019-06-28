@@ -72,9 +72,7 @@ public class MenuLateralActivity extends AppCompatActivity implements Navigation
                 fragment = new NosotrosFragment();
                 break;
             case R.id.nav_criollos:
-
                 fragment = new CriollosFragment();
-
                 break;
             case R.id.nav_sucursales:
 //                fragment = new TrashFragment();

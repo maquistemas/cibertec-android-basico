@@ -3,6 +3,7 @@
     <string name="txt_user">Usuario</string>
     <string name="txt_password">Password</string>
     <string name="btn_login">Login</string>
+    <string name="btn_register">Register</string>
     <string name="title_activity_menu">MenuActivity</string>
 
     <string name="platos_criollos">Platos Criollos</string>
@@ -33,6 +34,12 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank criollos</string>
+    <string name="reg_nombre">Nombres</string>
+    <string name="reg_apellidos">Apellidos</string>
+    <string name="reg_usuario">Usuario</string>
+    <string name="reg_password">Password</string>
+    <string name="reg_registrar">Registrar</string>
+    <string name="reg_limpiar">Limpiar</string>
 
 
 </resources>
