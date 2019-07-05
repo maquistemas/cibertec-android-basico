@@ -20,6 +20,7 @@ import pe.com.maquistemas.basicproy.fragment.CriollosFragment;
 import pe.com.maquistemas.basicproy.fragment.InboxFragment;
 import pe.com.maquistemas.basicproy.R;
 import pe.com.maquistemas.basicproy.fragment.NosotrosFragment;
+import pe.com.maquistemas.basicproy.fragment.SucursalesFragment;
 
 public class MenuLateralActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     ActionBarDrawerToggle toggle;
@@ -75,7 +76,7 @@ public class MenuLateralActivity extends AppCompatActivity implements Navigation
                 fragment = new CriollosFragment();
                 break;
             case R.id.nav_sucursales:
-//                fragment = new TrashFragment();
+                fragment = new SucursalesFragment();
                 break;
             case R.id.nav_reservaciones:
 //                fragment = new TrashFragment();
