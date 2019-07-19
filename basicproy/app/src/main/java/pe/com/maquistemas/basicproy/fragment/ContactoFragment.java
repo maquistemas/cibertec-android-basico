@@ -75,6 +75,8 @@ public class ContactoFragment extends Fragment implements View.OnClickListener{
             case R.id.buttonSendEmail:
                 Log.i(TAG, "CLICK");
                 iniciarServicio();
+                editTextSubject.setText("");
+                editTextMessage.setText("");
                 break;
         }
     }
