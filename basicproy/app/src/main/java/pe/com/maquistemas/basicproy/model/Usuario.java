@@ -12,6 +12,7 @@ public class Usuario implements Parcelable {
     private long id;
     private String nombres;
     private String apellidos;
+    private String email;
     private String usuario;
     private String password;
 
@@ -39,6 +40,14 @@ public class Usuario implements Parcelable {
 
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getUsuario() {
@@ -70,6 +79,7 @@ public class Usuario implements Parcelable {
         dest.writeLong(id);
         dest.writeString(nombres);
         dest.writeString(apellidos);
+        dest.writeString(email);
         dest.writeString(usuario);
         dest.writeString(password);
     }
@@ -77,10 +87,18 @@ public class Usuario implements Parcelable {
     public Usuario() {
     }
 
+    public Usuario(String nombres, String apellidos, String email, String usuario) {
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+        this.email = email;
+        this.usuario = usuario;
+    }
+
     public Usuario(Parcel in){
         this.id = in.readLong();
         this.nombres = in.readString();
         this.apellidos = in.readString();
+        this.email = in.readString();
         this.usuario = in.readString();
         this.password = in.readString();
     }

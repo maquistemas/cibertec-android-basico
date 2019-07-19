@@ -1,8 +1,10 @@
 package pe.com.maquistemas.basicproy.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,12 +14,17 @@ import pe.com.maquistemas.basicproy.R;
 import pe.com.maquistemas.basicproy.database.AppDatabase;
 import pe.com.maquistemas.basicproy.database.UsuarioDao;
 import pe.com.maquistemas.basicproy.model.Usuario;
+import pe.com.maquistemas.basicproy.session.SessionUsuario;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    final String TAG = "MainActivity";
     EditText txt_user,txt_password;
     Button btn_login, btn_register;
     final static int REQUEST_CODE_VALIDAR = 1001;
+
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         
         inicializarObjetos();
+        inicializarVariables();
     }
 
     private void inicializarObjetos() {
@@ -34,6 +42,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_login.setOnClickListener(this);
         btn_register = findViewById(R.id.btn_register);
         btn_register.setOnClickListener(this);
+    }
+
+    void inicializarVariables(){
+        sharedPreferences = getSharedPreferences(getResources().getString(R.string.session_key), MODE_PRIVATE);
+        editor = sharedPreferences.edit();
     }
 
 
@@ -69,6 +82,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if(usuario1 != null){
             Toast.makeText(MainActivity.this, "Bienvenido: " +usuario1.getNombres() +" "+usuario1.getApellidos(), Toast.LENGTH_LONG).show();
+
+            SessionUsuario sessionUsuario = new SessionUsuario(MainActivity.this);
+            sessionUsuario.setSessionUsuario(usuario1);
+            Log.i(TAG, "Email: "+ sessionUsuario.getUsuarioSession().getEmail());
+
             return usuario1;
         }else {
             Toast.makeText(MainActivity.this, "Usuario no registrado", Toast.LENGTH_LONG).show();
@@ -76,6 +94,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
+
+
 
 
 

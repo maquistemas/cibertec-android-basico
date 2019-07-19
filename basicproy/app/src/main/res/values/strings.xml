@@ -27,7 +27,7 @@
     <string name="nav_sucursal">Sucursales</string>
     <string name="nav_reserva">Reservaciones</string>
     <string name="nav_soporte">Soporte</string>
-    <string name="nav_ayuda">Ayuda</string>
+    <string name="nav_contacto">Contacto</string>
     <string name="nav_admin">Administracion</string>
     <string name="nav_open_drawer">Open navigation drawer</string>
     <string name="nav_close_drawer">Close navigation drawer</string>
@@ -40,6 +40,22 @@
     <string name="reg_password">Password</string>
     <string name="reg_registrar">Registrar</string>
     <string name="reg_limpiar">Limpiar</string>
+    <string name="reg_email">correo</string>
+
+
+    <!-- Session de usuario -->
+    <string name="session_key">session_key</string>
+    <string name="sesion_usuario_nombres">sesion_usuario_nombres</string>
+    <string name="sesion_usuario_apellidos">sesion_usuario_apellidos</string>
+    <string name="sesion_usuario_usuario">sesion_usuario_usuario</string>
+    <string name="sesion_usuario_email">sesion_usuario_email</string>
+
+    <!-- Email -->
+    <string name="email_from">De:</string>
+    <string name="email_to">Para:</string>
+    <string name="email_subject">Asunto:</string>
+    <string name="email_message">Mensaje</string>
+    <string name="email_send">Enviar</string>
 
 
 </resources>

@@ -31,9 +31,9 @@
         >
         <menu>
             <item
-                android:id="@+id/nav_ayuda"
+                android:id="@+id/contacto"
                 android:icon="@android:drawable/ic_menu_help"
-                android:title="@string/nav_ayuda"
+                android:title="@string/nav_contacto"
                 />
             <item
                 android:id="@+id/nav_administracion"

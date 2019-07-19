@@ -1,5 +1,6 @@
 package pe.com.maquistemas.basicproy.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,7 +16,7 @@ import pe.com.maquistemas.basicproy.model.Usuario;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
-    EditText etNombres, etApellidos, etUsuario, etPassword;
+    EditText etNombres, etApellidos, etEmail,  etUsuario, etPassword;
     Button btRegistrar, btLimpiar;
     Usuario usuario;
 
@@ -51,6 +52,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
    void iniciarObjetos(){
         etNombres = findViewById(R.id.etNombres);
         etApellidos = findViewById(R.id.etApellidos);
+        etEmail = findViewById(R.id.etEmail);
         etUsuario = findViewById(R.id.etUsuario);
         etPassword = findViewById(R.id.etPassword);
         btRegistrar = findViewById(R.id.btRegistrar);
@@ -63,13 +65,18 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         usuario = new Usuario();
         usuario.setNombres(etNombres.getText().toString());
         usuario.setApellidos(etApellidos.getText().toString());
+        usuario.setEmail(etEmail.getText().toString());
         usuario.setUsuario(etUsuario.getText().toString());
         usuario.setPassword(etPassword.getText().toString());
         try {
             UsuarioDao usuarioDao = AppDatabase.getInstance(getApplicationContext()).usuarioDao();
             usuarioDao.insertar(usuario);
+
             Toast.makeText(RegisterActivity.this,"Se registro satisfactoriamente",Toast.LENGTH_LONG).show();
             Log.i(TAG, "Se registro satisfactoriamente");
+            Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+            startActivity(intent);
+
         }catch (Exception e){
             Toast.makeText(RegisterActivity.this,"Error al registrar",Toast.LENGTH_LONG).show();
             Log.e(TAG,e.getMessage());
@@ -79,6 +86,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     void limpiar(){
         etNombres.setText("");
         etApellidos.setText("");
+        etEmail.setText("");
         etUsuario.setText("");
         etPassword.setText("");
     }

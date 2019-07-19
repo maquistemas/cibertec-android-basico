@@ -13,23 +13,26 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 
 import pe.com.maquistemas.basicproy.adapter.CriollosTabAdapter;
+import pe.com.maquistemas.basicproy.fragment.ContactoFragment;
 import pe.com.maquistemas.basicproy.fragment.CriollosFragment;
 import pe.com.maquistemas.basicproy.fragment.InboxFragment;
 import pe.com.maquistemas.basicproy.R;
 import pe.com.maquistemas.basicproy.fragment.NosotrosFragment;
 import pe.com.maquistemas.basicproy.fragment.SucursalesFragment;
+import pe.com.maquistemas.basicproy.session.SessionUsuario;
 
 public class MenuLateralActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     ActionBarDrawerToggle toggle;
+    final String TAG = "MenuLateralActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_lateral);
-
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -81,8 +84,8 @@ public class MenuLateralActivity extends AppCompatActivity implements Navigation
             case R.id.nav_reservaciones:
 //                fragment = new TrashFragment();
                 break;
-            case R.id.nav_ayuda:
-                intent = new Intent(this, MenuActivity.class);
+            case R.id.contacto:
+               fragment = new ContactoFragment();
                 break;
             case R.id.nav_administracion:
 //                intent = new Intent(this, FeedbackActivity.class);
