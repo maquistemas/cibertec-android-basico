@@ -80,4 +80,5 @@ public class AlmuerzoAdapter extends RecyclerView.Adapter<AlmuerzoAdapter.ViewHo
         return drawableResourceId;
     }
 
+
 }
